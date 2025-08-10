@@ -272,7 +272,7 @@ function App({ token }) {
 
     // Default to 'SELECTION' page
     return (
-        <div className="min-h-screen bg-blue-50 font-sans">
+        <div className="min-h-screen bg-blue-200 font-sans py-10">
             <div className="container mx-auto px-4 py-8">
                 {bus && (
                     <header className="mb-8">
@@ -321,7 +321,7 @@ function App({ token }) {
                                         </div>
                                         <div className="flex justify-between items-center mb-4">
                                             <span className="text-gray-600">Total Price:</span>
-                                            <span className="text-2xl font-bold text-blue-600">${bus.price_per_seat * selectedSeats.length}</span>
+                                            <span className="text-2xl font-bold text-blue-600">${bus.price * selectedSeats.length}</span>
                                         </div>
                                     </div>
                                 ) : (
