@@ -282,8 +282,9 @@ function App({ token }) {
                                 <p className="text-gray-500">{bus.origin} → {bus.destination}</p>
                              </div>
                              <div className="text-right mt-4 md:mt-0">
-                                <p className="text-lg font-semibold text-blue-600">{bus.travel_date}</p>
                                 <p className="text-sm text-gray-500">Bus No: {bus.number}</p>
+                                <p className="text-lg font-semibold text-blue-600">{bus.travel_date}</p>
+                                <p className="text-gray-500">{bus.start_time} → {bus.reach_time}</p>
                              </div>
                         </div>
                     </header>
