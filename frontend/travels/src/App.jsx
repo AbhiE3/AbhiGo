@@ -5,8 +5,12 @@ import LoginForm from './deepcomponents/LoginForm'
 import BusList from './deepcomponents/BusList'
 import BusSeats from './deepcomponents/BusSeats'
 import UserBookings from './deepcomponents/UserBooking'
-import Wrapper from './deepcomponents/Wrapper'
+import "@fontsource/playwrite-hu";        
 
+import "@fontsource/saira/400.css";
+import "@fontsource/saira/600.css";
+
+import './App.css'
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem('token'))
@@ -51,9 +55,9 @@ const LogoutIcon = () => (
 const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-green-900 flex flex-col">
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 bg-transparent">
+      <nav className="absolute top-0 left-0 right-0 z-20 bg-transparent" style={{ fontFamily: "'Playwrite HU', sans-serif" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20 text-white">
             <Link to="/" className="flex items-center">
@@ -108,6 +112,7 @@ const navigate = useNavigate();
               )}
             </div>
           </div>
+          <hr color='white' />
         </div>
       </nav>
 
@@ -122,9 +127,9 @@ const navigate = useNavigate();
       </Routes>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200">
+      <footer className="bg-teal-900" style={{ fontFamily: "'Playwrite HU', sans-serif" }}>
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 text-sm">
+          <p className="text-center text-gray-100 text-sm">
             &copy; {new Date().getFullYear()} AbhiGo. All rights reserved.
           </p>
         </div>

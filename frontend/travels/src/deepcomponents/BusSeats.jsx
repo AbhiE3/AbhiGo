@@ -128,7 +128,7 @@ const TicketConfirmationPage = ({ bookingDetails, onClose }) => {
 
     return (
         <div className="min-h-screen bg-green-500 flex justify-center items-center p-4">
-            <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 text-center transform transition-all animate-fade-in-up">
+            <div className="bg-gray-200 rounded-2xl shadow-xl w-full max-w-md p-8 text-center transform transition-all animate-fade-in-up">
                 <div className="mx-auto bg-green-100 rounded-full h-24 w-24 flex items-center justify-center mb-6">
                     <svg className="h-16 w-16 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                 </div>
@@ -272,18 +272,18 @@ function App({ token }) {
 
     // Default to 'SELECTION' page
     return (
-        <div className="min-h-screen bg-blue-200 font-sans py-10">
-            <div className="container mx-auto px-4 py-8">
+        <div className="min-h-screen bg-green-950 font-sans py-10">
+            <div className="container mx-auto px-4 py-20">
                 {bus && (
                     <header className="mb-8">
-                        <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between">
+                        <div className="bg-gray-200 p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between">
                              <div>
                                 <h1 className="text-3xl font-bold text-gray-800">{bus.bus_name}</h1>
                                 <p className="text-gray-500">{bus.origin} → {bus.destination}</p>
                              </div>
                              <div className="text-right mt-4 md:mt-0">
                                 <p className="text-sm text-gray-500">Bus No: {bus.number}</p>
-                                <p className="text-lg font-semibold text-blue-600">{bus.travel_date}</p>
+                                <p className="text-lg font-semibold text-green-600">{bus.travel_date}</p>
                                 <p className="text-gray-500">{bus.start_time} → {bus.reach_time}</p>
                              </div>
                         </div>
@@ -300,7 +300,7 @@ function App({ token }) {
                     </div>
 
                     <aside>
-                        <div className="bg-white p-6 rounded-2xl shadow-lg sticky top-8 flex flex-col h-[calc(100vh-4rem)]">
+                        <div className="bg-gray-200 p-6 rounded-2xl shadow-lg sticky top-8 flex flex-col h-[calc(100vh-4rem)]">
                             <h2 className="text-xl font-bold text-gray-800 mb-4">Your Selection</h2>
                             <div className="space-y-4 mb-6">
                                 <div className="flex items-center"><div className="w-6 h-6 rounded-md bg-blue-100 mr-3"></div><span className="text-gray-600">Available</span></div>
@@ -315,13 +315,13 @@ function App({ token }) {
                                             <h3 className="font-semibold text-gray-700">Selected Seats:</h3>
                                             <div className="flex flex-wrap gap-2 mt-2">
                                                 {selectedSeats.map(seat => (
-                                                    <span key={seat.id} className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">{seat.seat_number}</span>
+                                                    <span key={seat.id} className="bg-white text-green-800 text-sm font-medium px-3 py-1 rounded-full">{seat.seat_number}</span>
                                                 ))}
                                             </div>
                                         </div>
                                         <div className="flex justify-between items-center mb-4">
                                             <span className="text-gray-600">Total Price:</span>
-                                            <span className="text-2xl font-bold text-blue-600">${bus.price * selectedSeats.length}</span>
+                                            <span className="text-2xl font-bold text-green-600">${bus.price * selectedSeats.length}</span>
                                         </div>
                                     </div>
                                 ) : (
@@ -331,7 +331,7 @@ function App({ token }) {
                              <button
                                 onClick={handleProceedToPayment}
                                 disabled={selectedSeats.length === 0 || isBooking}
-                                className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
+                                className="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center"
                             >
                                 Confirm and Pay
                             </button>
